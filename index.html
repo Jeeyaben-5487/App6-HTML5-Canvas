@@ -86,6 +86,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 				<button class="w3-btn w3-indigo" onclick="drawRectangle()">Draw a rectangle</button>
 
+					<button class="w3-btn w3-indigo" onclick="drawName()">Draw my name</button>
+
+
 		</div>
 
 </div>
@@ -104,6 +107,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function drawRectangle(){
 		ctx.fillStyle = "black";
 			ctx.fillRect(50, 25, 150, 100);
+	}
+
+
+	function drawName(){
+		ctx.font = "30px Georgia";
+			ctx.fillText("Jeeya", 10, 50);
 	}
 
 </script>

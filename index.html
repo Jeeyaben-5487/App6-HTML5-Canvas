@@ -34,25 +34,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 
-<script>
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-
-
-	var c = document.getElementById("a");
-		var ctx = c.getContext("2d");
-
-
-	function drawRectangle(){
-		ctx.fillStyle = "black";
-			ctx.fillRect(50, 25, 150, 100);
-	}
-
-</script>
-
-
-
 <style>	
 .body {
      margin: 0em;
@@ -109,6 +90,23 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 </div>
 
+
+<script>
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+
+	var c = document.getElementById("a");
+	var ctx = c.getContext("2d");
+
+
+	function drawRectangle(){
+		ctx.fillStyle = "black";
+			ctx.fillRect(50, 25, 150, 100);
+	}
+
+</script>
 
 <footer class="w3-bottom w3-container w3-dark-gray">
 	<p>DIY!</p>

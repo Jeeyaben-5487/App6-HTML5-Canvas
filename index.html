@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The purpose of this code and app is to create a canvas that will perform various functions. When clicked/prompted a button should draw a rectangle, another button should write the author's name, another button should load an image, and lastly a button should clear everything. 
  
 Known Issues:
-blah, blah, blah, blah
+I had to move the script with varibles and functions at the very end to ensure the code would execute. Additionally, I was trying to add another image but was not able to do so. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -33,6 +33,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
+
+<!--Style for pages-->
 
 <style>	
 .body {
@@ -54,7 +56,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-<!--Introduction to code/app-->
+<!--Introduction to the app-->
 
 <body>
 <div id="header" class="w3-container w3-flat-midnight-blue">
@@ -76,67 +78,79 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-midnight-blue">
+	<div id="header" class="w3-container w3-flat-midnight-blue"> 
+<!--Changed the header color-->
 		<h1>Canvas</h1>
 	</div>
 
 		<div id="content" class="w3-container">
-			<canvas id="a" width="400" height="400" style="border:1px dotted #000000;"></canvas>
-
+			<canvas id="a" width="400" height="400" style="border:1px dotted #000000;"></canvas> 
+<!--This is the code for the canvas that a dotted border, width of 400, and height of 400-->
 
 				<button class="w3-btn w3-indigo" onclick="drawRectangle()">Draw a rectangle</button>
+<!--This is the button that will generate the rectangle when clicked-->
 
 					<button class="w3-btn w3-indigo" onclick="drawName()">Draw my name</button>
-															<button class="w3-btn w3-indigo" onclick="drawImage()">Load the image</button>
+<!--This button will display my name when clicked-->
 
-							<button class="w3-btn w3-indigo" onclick="clearCanvas()">Clear the canvas</button>
+						<button class="w3-btn w3-indigo" onclick="clearCanvas()">Clear the canvas</button>
+<!--This button will display a image when clicked-->
 
 
+<script>/*
+<img id="hamster" src="https://i.pinimg.com/736x/3b/90/72/3b9072db6959a387b7141b76f17c30b9.jpg" alt="hamster" width="100" height="50">
+This is the image that is used for the button */
 
-/*<img id="hamster" src="https://i.pinimg.com/736x/3b/90/72/3b9072db6959a387b7141b76f17c30b9.jpg" alt="hamster" width="100" height="50">
-
-<img id="h2" src="https://mcdn.coolmate.me/image/March2023/tong-hop-25-anh-meme-hamster-cuc-hai-huoc-1410_917.jpg" alt="picture" width="50" height="100">*/
-
+//Commenting out the image so it does not appear on the page 
+</script>
 
 		</div>
 
 </div>
 
+<!--The functions that will draw the various elements on the canvas-->
 
 <script>
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	/*var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp.*/
+//Getting rid of the alert 
 
 
-	var c = document.getElementById("a");
-	var ctx = c.getContext("2d");
+//Had to put all the varibles and functions at the end so they would work and disaply the elements 
+	var c = document.getElementById("a"); //This variable connects the functions to the canvas 
+	var ctx = c.getContext("2d"); //This variable allows all the elements to be shown 
 
 
 	function drawRectangle(){
 		ctx.fillStyle = "black";
 			ctx.fillRect(50, 25, 150, 100);
 	}
-
+//This function will draw a black rectangle in the top left corner of the canvas 
+//The first two numbers represent the position and the last two represent the size 
 
 	function drawName(){
 		ctx.font = "30px Georgia";
 			ctx.fillText("Jeeya", 200, 200);
 	}
-
+//This function outputs my name in the middle of the canvas 
+//The numbers present the position 
 	
 	function drawImage(){
 		var img = document.getElementById("hamster");
 			ctx.drawImage(img, 250, 250, 150, 150);
 	}
-	
+//This function will load an image in the bottom right of the canvas
+//The first two numbers represent the position and the last two represent the size 
 
 	function clearCanvas(){
 		c.width = 400;
 	}
-
+//This function will clear the entire canvas 
+	
 </script>
 
+<script>//I change the color of the footer</script>
 <footer class="w3-bottom w3-container w3-dark-gray">
 	<p>DIY!</p>
 </footer>

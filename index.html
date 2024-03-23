@@ -91,7 +91,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 							<button class="w3-btn w3-indigo" onclick="clearCanvas()">Clear the canvas</button>
 
-								<button class="w3-btn w3-indigo" onclick="drawImage()">Surprise!</button>
+
+		</div>
+
+
+		<div id="contentt" class="w3-container">
+			<canvas id="a" width="500" height="500";"></canvas>
+
+
+				<button class="w3-btn w3-indigo" onclick="loadImage()">Surprise!</button>
 
 
 
@@ -133,7 +141,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 
 
-	function drawImage(){
+	function loadImage(){
 		var img = document.getElementById("hamster");
 			ctx.drawImage(img, 200, 200, 300, 300);
 	}	
